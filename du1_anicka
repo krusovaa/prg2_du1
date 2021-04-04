@@ -1,0 +1,18 @@
+from PySide2.QtCore import QObject, Signal, Slot, Property, QUrl, QAbstractListModel, QByteArray
+from PySide2.QtGui import QGuiApplication
+from PySide2.QtQuick import QQuickView
+from PySide2.QtPositioning import QGeoCoordinate
+from PySide2 import QtCore
+from enum import Enum
+import typing
+import sys
+import json
+
+VIEW_URL = "Ukol1/du1.qml"   # Advanced user interface
+
+app = QGuiApplication(sys.argv)
+view = QQuickView()
+url = QUrl(VIEW_URL)
+view.setSource(url)
+view.show()
+app.exec_()
